@@ -1,8 +1,13 @@
 name: Contribution Snake
+
+permissions:
+  contents: write
+
 on:
   schedule: [{ cron: "0 */12 * * *" }]
   workflow_dispatch:
   push: { branches: ["main"] }
+
 jobs:
   build:
     runs-on: ubuntu-latest
